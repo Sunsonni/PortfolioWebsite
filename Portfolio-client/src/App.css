@@ -1,42 +1,88 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  height: calc(100% - 100px);
+  margin-top: 100px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html, body {
+  /* margin: 0;
+  padding: 0; */
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-image: radial-gradient(circle, #c8b6ff, #d5c8ff, #e2dbff, #f0edff, #ffffff);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-buttons{
+  align-self: center;
 }
 
-.card {
-  padding: 2em;
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.read-the-docs {
-  color: #888;
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
 }
+
+.nav-link{
+  font-size: 1.5rem!important;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'DM Serif Display', serif;
+}
+
+.nav-bar{
+  height: 100px;
+}
+#navbar-margin{
+  margin: 5px 50px;
+}
+
+.title{
+  font-size: 2rem!important;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'DM Serif Display', serif;
+}
+
+#email-button {
+  background-color: rgba(255, 255, 255, 0.2)!important; /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  border: 2px solid #C8B6FF; 
+  padding: 10px 20px; /* Adjust padding */
+  border-radius: 100px; /* Rounded corners */
+  color: black; /* Text color */
+  font-size: 16px; /* Text size */
+  font-weight: 400;
+  font-style: normal!important;
+  font-family: 'DM Serif Display', serif!important;
+}
+
+
+
+#email-button:hover {
+  background: rgb(187,208,255)!important;
+background: linear-gradient(37deg, rgba(187,208,255,1) 25%, rgba(200,182,255,1) 67%)!important;
+  
+}
+
+
+.rounded-line {
+  width: 95%; /* Adjust width */
+  height: 3px; /* Line thickness */
+  background-color: black; /* Line color */
+  border-radius: 50px; /* Make the line rounded */
+  margin: 0 auto; /* Center the line horizontally */
+  margin-top: -4px; /* Optional: Pull the line closer to the navbar */
+  top: 0%;
+}
+
