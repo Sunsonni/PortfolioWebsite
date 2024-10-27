@@ -21,7 +21,7 @@ import {
             </NavbarBrand>
             <Nav className='mx-auto' navbar>
                 <NavItem>
-                    <Link to='/' className='nav-link'>About</Link>
+                    <Link to='/About' className='nav-link'>About</Link>
                 </NavItem>
                 <NavItem>
                     <Link to='/Work' className='nav-link'>Work</Link>
