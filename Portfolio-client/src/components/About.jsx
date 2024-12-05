@@ -1,7 +1,10 @@
+import '../App.css'
 const About = () => {
     
     return (
-        <h1>About page</h1>
+        <div className='about-content'>
+            <img className='sunset' src='/Sunset over water.JPG' alt='Sunset over water'/>
+        </div>
     );
 }
 

@@ -14,8 +14,20 @@ html, body {
 }
 
 body {
-  background-image: radial-gradient(circle, #c8b6ff, #d5c8ff, #e2dbff, #f0edff, #ffffff);
+  background-color: #EFE8D8!important;
+}
 
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/white-recycle-paper-texture.jpg') repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 .nav-buttons{
@@ -41,6 +53,12 @@ body {
   font-family: 'DM Serif Display', serif;
 }
 
+.navbar .nav-link[aria-current='page'] {
+  color: #7FA4B6!important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .nav-bar{
   height: 100px;
 }
@@ -49,10 +67,12 @@ body {
 }
 
 .title{
-  font-size: 2rem!important;
+  font-size: 4rem!important;
   font-weight: 400;
   font-style: normal;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Kenyan Coffee';
+  color: #7FA4B6;
+  letter-spacing: 3px;
 }
 
 #email-button {
@@ -85,5 +105,25 @@ background: linear-gradient(37deg, rgba(187,208,255,1) 25%, rgba(200,182,255,1) 
   margin: 0 auto; /* Center the line horizontally */
   margin-top: -4px; /* Optional: Pull the line closer to the navbar */
   top: 0%;
+}
+
+@font-face {
+  font-family: 'Kenyan Coffee';
+  src: url(/webfontkit-20241204-144918/kenyan_coffee_bd-webfont.woff);
+}
+
+.about-content {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.sunset {
+  display: flex;
+  width: 80%;
+  object-position: center;
+  object-fit: cover;
+  filter: blur(0.5px);
+  border: 1px solid black;
 }
 

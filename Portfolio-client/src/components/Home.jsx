@@ -1,8 +1,13 @@
+import './Home.css'
+
 const Home = () => {
     
     return (
         <>
-        <h1>Home page</h1>
+        <div class='tagline'>
+            <span class='code'> Creative Code, </span>
+            <span class='stories'>Compelling Stories</span>
+        </div>
         </>
     );
 }
