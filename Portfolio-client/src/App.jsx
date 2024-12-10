@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      <Navigation className='checking'/>
-      <Outlet />
+      <Navigation/>
+      <Outlet className='checking'/>
     </>
   )
 }

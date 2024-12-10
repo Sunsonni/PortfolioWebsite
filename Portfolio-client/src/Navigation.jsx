@@ -33,8 +33,8 @@ import {
                     >Resume</Link>
                 </NavItem>
             </Nav>
-       </Navbar>
        <div className="rounded-line"></div>
+       </Navbar>
        </>
     );
   }
