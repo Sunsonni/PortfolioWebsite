@@ -5,6 +5,7 @@ import {
 import App from './App.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
+import Resume from './components/Resume.jsx'
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/Resume',
-                element: <h1>Resume</h1>
+                element: <Resume/>
             }
         ]  
     }
