@@ -37,7 +37,6 @@ import {
             </Nav>
        <div className="rounded-line"></div>
        </Navbar>
-       <Footer className='fixed-bottom nav-bar'/>
        </>
     );
   }

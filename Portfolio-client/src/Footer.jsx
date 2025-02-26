@@ -3,7 +3,7 @@ import './App.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='footer fixed-bottom'>
             <div className='footer-content'>
                 <p>@ 2025 Sonnie M. Nguyen -  St. Louis, MO </p>
                 <a className='link' id='email-button' href='mailto:sonniemnguyen@gmail.com'>Email Me</a>
