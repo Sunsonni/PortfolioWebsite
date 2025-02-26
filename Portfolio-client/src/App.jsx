@@ -1,7 +1,6 @@
 import './App.css'
 import { Outlet,useLocation } from 'react-router-dom'
 import Navigation from './Navigation.jsx'
-import Footer from './Footer.jsx'
 
 function App() {
   const location = useLocation();
@@ -13,7 +12,7 @@ function App() {
       <div className={`content ${isHomePage ? 'home-page' : ''}`}>
         <Outlet/>
       </div>
-      <Footer/>
+  
     </div>
   )
 }

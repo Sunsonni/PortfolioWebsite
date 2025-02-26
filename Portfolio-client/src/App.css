@@ -215,4 +215,17 @@ body::after {
   color: #7FA4B6!important;
 }
 
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Centers the text horizontally */
+}
+
+embed {
+  max-width: 100%; /* Makes sure the PDF stays responsive */
+}
+
 

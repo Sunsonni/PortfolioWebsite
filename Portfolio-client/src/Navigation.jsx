@@ -5,7 +5,9 @@ import {
     NavItem,
   } from 'reactstrap';
   import { Link, useLocation } from 'react-router-dom'
+  import Footer from './Footer';
   import './App.css'
+
 
 
   const Navigation = () => {
@@ -35,6 +37,7 @@ import {
             </Nav>
        <div className="rounded-line"></div>
        </Navbar>
+       <Footer className='fixed-bottom nav-bar'/>
        </>
     );
   }
