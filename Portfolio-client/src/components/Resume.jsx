@@ -14,9 +14,9 @@ const Resume = () => {
 
     return (
         <>
+        <button  className='downloadButton' onClick={onButtonClick}>Download resume here</button>
         <div className='resume-container'>
             <embed src={pdfUrl} width="80%" align="middle" height="600px" type="application/pdf" />
-        <button onClick={onButtonClick}>Download resume here</button>
         </div>
         </>
     );
