@@ -7,6 +7,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Resume from './components/Resume.jsx'
 import Projects from './components/Projects.jsx'
+import { Post } from './components/Post.jsx'
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: '/Resume',
                 element: <Resume/>
+            },
+            {
+                path: '/post/:id',
+                element: <Post />
             }
         ]  
     }

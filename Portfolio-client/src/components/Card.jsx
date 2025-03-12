@@ -9,6 +9,7 @@ import {
 
 const Blog = ({project}) => {
 const { title, description, link, id } = project;
+console.log(id);
     return (
         <>
         <Card>
@@ -20,10 +21,10 @@ const { title, description, link, id } = project;
                     {description}
                 </CardText>
             </CardBody>
-            <CardLink href={link}>
+            <Link href={link} target="_blank" rel="noopener noreferrer">
                 Github Repo Link
-            </CardLink>
-            <Link to={`/post/${id}`}>
+            </Link>
+            <Link to={`/post/${id}`} className="btn btn-primary">
             View More
             </Link>
         </Card>

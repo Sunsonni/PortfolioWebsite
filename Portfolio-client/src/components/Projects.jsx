@@ -1,13 +1,13 @@
 import Blog from "./Card";
 import { getProjects } from "../utils/projectUtils";
 const Projects = () => {
-    const project = getProjects();
-    console.log(project);
+    const projects = getProjects();
+    console.log(projects);
 
     return (
         <>
-            {project.map((project) => {
-                <Blog key={project.id} project={project} />
+            {projects.map((project, index) => {
+                return <Blog key={project.id || index } project={project} />
             })
         }  
         </>
