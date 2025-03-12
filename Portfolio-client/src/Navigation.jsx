@@ -1,24 +1,32 @@
 import {
+    Collapse,
     Navbar,
     NavbarBrand,
     Nav,
     NavItem,
+    NavbarToggler,
   } from 'reactstrap';
+  import { useState } from 'react'
   import { Link, useLocation } from 'react-router-dom'
-  import Footer from './Footer';
   import './App.css'
 
 
 
   const Navigation = () => {
     const location = useLocation();
+    const [isOpen, setIsOpen ] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
+
     return (
        <>
-       <Navbar light expand='md' className='fixed-top nav-bar ' id='navbar-margin'>
+       <Navbar light expand='md' className='fixed-top nav-bar ps-4' id='navbar-margin'>
             <NavbarBrand href='/'>
                 <h1 className='title'>Sonnie Nguyen</h1>
             </NavbarBrand>
-            <Nav className='' navbar>
+            <NavbarToggler onClick={toggle}/>
+            <Collapse isOpen={isOpen} navbar>
+            <Nav className='ms-auto pe-4' navbar>
                 <NavItem>
                     <Link to='/About' className='nav-link'
                     aria-current={location.pathname ==='/About' ? 'page': undefined}
@@ -35,6 +43,7 @@ import {
                     >Resume</Link>
                 </NavItem>
             </Nav>
+            </Collapse>
        <div className="rounded-line"></div>
        </Navbar>
        </>

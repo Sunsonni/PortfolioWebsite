@@ -89,6 +89,7 @@ body::after {
   height: 90px;
   background-color: #EFE8D8; 
   padding: 0 50px;
+  margin: 0 50px;
   width: 100%; 
   display: flex;
   align-items: center;
@@ -237,8 +238,7 @@ embed {
 }
 
 .downloadButton{
-  background-color: aquamarine;
-  
+  background-color: #7FA4B6;
 }
 
 .footer{
@@ -246,8 +246,20 @@ embed {
   bottom: 0;
   left: 0;
   width: 100%;
-  /* background-color: #333; */
   text-align: center;
   padding: 0;
 }
+
+.aboutContent {
+  margin: 50px;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar{
+
+  }
+
+}
+
 
