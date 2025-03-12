@@ -1,17 +1,18 @@
 import Blog from "./Card";
-
+import { getProjects } from "../utils/projectUtils";
 const Projects = () => {
-    const project = 
-        {
-            title: 'Currency Converter',
-            description: 'Converts values from base of USD to other currencies from API',
-            link: 'https://github.com/Smidge101/Currency_counter',
-            id: 0
-        };
+    const project = getProjects();
+    console.log(project);
+
     return (
         <>
-        <Blog project={project} />
+            {project.map((project) => {
+                <Blog key={project.id} project={project} />
+            })
+        }  
         </>
     );
 }
 export default Projects;
+
+
