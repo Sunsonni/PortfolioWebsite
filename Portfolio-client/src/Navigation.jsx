@@ -25,7 +25,7 @@ import {
                 <h1 className='title'>Sonnie Nguyen</h1>
             </NavbarBrand>
             <NavbarToggler onClick={toggle}/>
-            <Collapse isOpen={isOpen} navbar>
+            <Collapse isOpen={isOpen}  className='navbar-collapse' navbar>
             <Nav className='ms-auto pe-4' navbar>
                 <NavItem>
                     <Link to='/About' className='nav-link'
@@ -44,8 +44,8 @@ import {
                 </NavItem>
             </Nav>
             </Collapse>
-       <div className="rounded-line"></div>
        </Navbar>
+       <div className="rounded-line"></div>
        </>
     );
   }

@@ -94,6 +94,14 @@ body::after {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  position: relative;
+  z-index: 100px;
+}
+
+.navbar-collapse {
+  position: relative;
+  background-color: #EFE8D8; 
+  margin-top: -10px;;
 }
 
 .rounded-line {
@@ -104,7 +112,9 @@ body::after {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 90px; 
-  position: absolute;
+  /* bottom: -5px; */
+  position: fixed;
+  z-index: 99;
 }
 
 .title{
@@ -155,7 +165,7 @@ body::after {
   font-family: "DM Serif Display";
   font-size: large;
   width: 90%;
-
+  
 }
 
 @keyframes marquee {
@@ -168,7 +178,7 @@ body::after {
 }
 
 .marquee-container {
-  width: 40%;
+  width: 50%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
@@ -198,17 +208,29 @@ body::after {
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: right;
   justify-content: flex-end;
   flex-direction: row;
   background-color: #EFE8D8;
   padding: 10px 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer p {
+  white-space: nowrap; /* Prevents line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." if text is too long */
+  max-width: 200px; /* Adjust based on how much space you want the text to take */
+  margin: 0;
 }
 
 .footer-content a {
   color: black;
   text-decoration: none;
   margin: 0 10px;
+  flex-shrink: 0;
 }
 
 .footer-content a:hover {
@@ -255,11 +277,12 @@ embed {
   
 }
 
-@media only screen and (max-width: 600px) {
+
+/* @media only screen and (max-width: 600px) {
   .nav-bar{
 
   }
 
-}
+} */
 
 
