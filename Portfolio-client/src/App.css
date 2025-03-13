@@ -118,7 +118,7 @@ body::after {
 }
 
 .title{
-  font-size: 4rem!important;
+  font-size: 4rem;
   font-weight: 400;
   font-style: normal;
   font-family: 'Kenyan Coffee';
@@ -208,7 +208,7 @@ body::after {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: none;
   align-items: right;
   justify-content: flex-end;
   flex-direction: row;
@@ -278,11 +278,27 @@ embed {
 }
 
 
-/* @media only screen and (max-width: 600px) {
-  .nav-bar{
-
+@media only screen and (max-width: 500px) {
+  .title{
+    font-size: 2rem;
   }
 
-} */
+  .navbar-toggler {
+    margin-top: 0;
+  }
+  
+  .footer-content {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .footer-content p {
+    display: none;
+  }
+
+  .footer-content a{
+    margin: 0 10px;
+  }
+
+}
 
 
