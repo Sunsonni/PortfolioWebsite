@@ -11,8 +11,7 @@ const Blog = ({project}) => {
 const { title, description, link, id } = project;
 console.log(id);
     return (
-        <>
-        <Card>
+        <Card className='card'>
             <CardTitle>
                 {title}
             </CardTitle>
@@ -28,7 +27,6 @@ console.log(id);
             View More
             </Link>
         </Card>
-        </>
     );
 };
 

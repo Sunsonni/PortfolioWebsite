@@ -20,7 +20,7 @@ html, body {
 
 .content {
   flex: 1;
-  padding-top: 90px; /* Adjust this value to match the height of your navbar */
+  padding-top: 90px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,7 @@ html, body {
 
 body {
   background-color: #EFE8D8!important;
+  padding-bottom: 50px;
 }
 
 body::after {
@@ -105,14 +106,13 @@ body::after {
 }
 
 .rounded-line {
-  width: 95%; /* Adjust width */
-  height: 3px; /* Line thickness */
-  background-color: black; /* Line color */
-  border-radius: 50px; /* Make the line rounded */
+  width: 95%;
+  height: 3px; 
+  background-color: black; 
+  border-radius: 50px; 
   left: 50%;
   transform: translateX(-50%);
   margin-top: 90px; 
-  /* bottom: -5px; */
   position: fixed;
   z-index: 99;
 }
@@ -127,9 +127,9 @@ body::after {
 }
 
 .content-container {
-  padding-top: 100px; /* Adjust for navbar height */
-  padding-bottom: 80px; /* Adjust for footer height */
-  min-height: calc(100vh - 130px); /* Adjust dynamically */
+  padding-top: 100px; 
+  padding-bottom: 80px; 
+  min-height: calc(100vh - 130px); 
 }
 
 /* home page items */
@@ -230,10 +230,10 @@ body::after {
 }
 
 .footer p {
-  white-space: nowrap; /* Prevents line breaks */
+  white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; /* Adds "..." if text is too long */
-  max-width: 200px; /* Adjust based on how much space you want the text to take */
+  text-overflow: ellipsis; 
+  max-width: 200px;
   margin: 0;
 }
 
@@ -260,14 +260,14 @@ body::after {
 .resume-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  height: 100vh; /* Full viewport height */
-  text-align: center; /* Centers the text horizontally */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  text-align: center; 
 }
 
 embed {
-  max-width: 100%; /* Makes sure the PDF stays responsive */
+  max-width: 100%;
 }
 
 .downloadButton{
@@ -281,11 +281,31 @@ embed {
   width: 100%;
   text-align: center;
   padding: 0;
+  z-index: 10;
 }
 
 .aboutContent {
   margin: 50px;
-  
+
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  gap: 10px;
+
 }
 
 
@@ -314,6 +334,7 @@ embed {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     justify-content: center;
   }
 

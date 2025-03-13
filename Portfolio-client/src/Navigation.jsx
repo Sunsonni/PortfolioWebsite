@@ -6,17 +6,38 @@ import {
     NavItem,
     NavbarToggler,
   } from 'reactstrap';
-  import { useState } from 'react'
+  import { useState, useEffect } from 'react'
   import { Link, useLocation } from 'react-router-dom'
   import './App.css'
 
 
 
   const Navigation = () => {
-    const location = useLocation();
-    const [isOpen, setIsOpen ] = useState(false);
+      const location = useLocation();
+      const [isOpen, setIsOpen ] = useState(false);
+      
+      const toggle = () => setIsOpen(!isOpen);
+      
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if(!event.target.closest('.navbar')) {
+                setIsOpen(false);
+            }
+        };
 
-    const toggle = () => setIsOpen(!isOpen);
+        if(isOpen) {
+            document.addEventListener('click', handleClickOutside);
+        } else {
+            document.removeEventListener('click', handleClickOutside);
+        }
+
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, [isOpen])
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location.pathname]);
+    
 
     return (
        <>
