@@ -1,7 +1,7 @@
 const projects = [
     {
         title: 'Green Routine',
-        description: 'Challenge that promotes environmental inititives by telling the user their environmental impact',
+        description: 'Challenge app that promotes environmental inititives by telling the user their environmental impact',
         link: 'https://github.com/TheGitGang/GreenRoutine',
         id: 0
     },
