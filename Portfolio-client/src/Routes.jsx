@@ -8,11 +8,13 @@ import About from './components/About.jsx'
 import Resume from './components/Resume.jsx'
 import Projects from './components/Projects.jsx'
 import { Post } from './components/Post.jsx'
+import Error from './components/404.jsx'
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />, 
+        element: <App />,
+        errorElement: <Error/>, 
         children: [
             {
                 path: '/',
