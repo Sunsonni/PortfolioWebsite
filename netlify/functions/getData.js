@@ -1,9 +1,24 @@
 export async function handler(event, context) {
-   //   try {
-   //      const apiKey = process.env.VITE_STRAPI_API_KEY
-   //   }
-   return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "please work"})
-   };
+   try {
+      const API_KEY = process.env.STRAPI_API_KEY;
+      const BASE_URL = process.env.STRAPI_AUTH_DOMAIN;
+      const response = await fetch(`${BASE_URL}/api/articles`, {
+            headers: {
+                'Authorization': `Bearer ${API_KEY}`,
+                'Content-Type': 'application/json'
+            }
+      });
+      const cmsData = await response.json();
+      console.log(cmsData);
+      return {
+         statusCode: 200,
+         body: JSON.stringify(cmsData)
+      };
+   } catch (error) {
+      console.error("Error fetching data", error);
+      return {
+         statusCode: 500,
+         body: JSON.stringify({ error: "Error getting values" })
+      };
+   }
 }
