@@ -2,7 +2,7 @@ export async function handler() {
    try {
       const API_KEY = process.env.VITE_STRAPI_API_KEY;// eslint-disable-line
       const BASE_URL = process.env.VITE_STRAPI_AUTH_DOMAIN; // eslint-disable-line
-      const response = await fetch(`${BASE_URL}/api/articles`, {
+      const response = await fetch(`${BASE_URL}/api/projects`, {
             headers: {
                 'Authorization': `Bearer ${API_KEY}`,
                 'Content-Type': 'application/json'

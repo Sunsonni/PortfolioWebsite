@@ -1,19 +1,28 @@
 import Blog from "./Card";
-import { getProjects } from "../utils/projectUtils";
-import fetchArticles from "../services/service";
+import { useEffect, useState } from "react";
+import APIService from '../services/service'
+
 const Projects = () => {
-    const projects = getProjects();
-    const test = async () => {
-        const response = await fetchArticles();
-        console.log(response);
-    }
+    const [ projects, setProjects ] = useState({});
+    useEffect (() => {
+        const fetchData = async () => {
+            try {
+                const data = await APIService.fetchProjects();
+                setProjects(data);
+                console.log(data)
+            } catch (error) {
+                console.error("Error fetching projects", error);
+            }
+        };
+        fetchData();
+    }, [])
     return (
         <div className="blog">
-            {projects.map((project, index) => {
+            {/* {projects.map((project, index) => {
                 return <Blog key={project.id || index } project={project} />
             })
-        }
-        <button onClick={test}></button>  
+        } */}
+        <pre>{JSON.stringify(projects)}</pre>
         </div>
     );
 }
