@@ -3,17 +3,16 @@ import {
     Card,
     CardBody,
     CardTitle,
-    CardText,
-    CardLink
+    CardText
 } from 'reactstrap'
+import type project from '../interfaces/project.js';
 
-const Blog = ({project}) => {
-    const { title, description, link, id } = project;
+const Blog = ({ project }: { project: project }) => {
+    const {Name, Description, id, link} = project;
     const navigate = useNavigate();
-    // const handleClick = () => {
-    //     navigate(`/post/${id}`);
-    // };
-
+    const handleClick = () => {
+        navigate(`/post/${id}`);
+    };
     const placeholderClick = () => {
         window.open(link);
     };
@@ -22,20 +21,20 @@ const Blog = ({project}) => {
         <div className='project-card' onClick={placeholderClick}>
             <Card className='card'>
                 <CardTitle className='nav-link'>
-                    {title}
+                    {Name}
                 </CardTitle>
                 <CardBody>
                     <CardText>
-                        {description}
+                        {Description}
                     </CardText>
                 </CardBody>
                 <div className='cardButtons'>
                 <a className='projects-link'href={link} target="_blank" onClick={(e) => e.stopPropagation()} >
                     Github Link
                 </a>
-                {/* <Link to={`/post/${id}`} className="projects-link" onClick={(e) => e.stopPropagation()} >
+                <Link to={`/post/${id}`} className="projects-link" onClick={(e) => e.stopPropagation()} >
                 View More
-                </Link> */}
+                </Link>
                 </div>
             </Card>
         </div>

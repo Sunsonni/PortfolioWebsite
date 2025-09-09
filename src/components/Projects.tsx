@@ -1,15 +1,15 @@
-import Blog from "./Card";
+import Blog from "./Card.js";
 import { useEffect, useState } from "react";
-import APIService from '../services/service'
+import APIService from '../services/service.js'
+import type project from "../interfaces/project.js";
 
 const Projects = () => {
-    const [ projects, setProjects ] = useState({});
+    const [ projects, setProjects ] = useState([]);
     useEffect (() => {
         const fetchData = async () => {
             try {
                 const data = await APIService.fetchProjects();
-                setProjects(data);
-                console.log(data)
+                setProjects(data.data);
             } catch (error) {
                 console.error("Error fetching projects", error);
             }
@@ -18,11 +18,16 @@ const Projects = () => {
     }, [])
     return (
         <div className="blog">
-            {/* {projects.map((project, index) => {
-                return <Blog key={project.id || index } project={project} />
+            {projects.map((project: project) => {
+                return (
+                    <Blog 
+                    key={project.id} 
+                    project={project}
+                    />
+
+                )
             })
-        } */}
-        <pre>{JSON.stringify(projects)}</pre>
+        }
         </div>
     );
 }

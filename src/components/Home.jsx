@@ -10,7 +10,7 @@ const Home = () => {
                     Hello internet!  <br />
                     My name is Sonnie (pronounced Sonny) and I am a Software Engineering Student at SIUE
                     <br/><br/>
-                    <Link className='text-links' to='/Projects'>Click here if you want to hear about the projects I'm working on</Link>
+                    <Link className='text-links' to='/Projects'>Click here if you want to hear about the projects I&apos;m working on</Link>
                     <br/>
                     <Link to='/About' className='text-links'
                     >Click here if you want to hear more about me :)</Link>
