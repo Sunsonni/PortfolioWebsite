@@ -9,6 +9,7 @@ const Projects = () => {
         const fetchData = async () => {
             try {
                 const data = await APIService.fetchProjects();
+                console.log(data.data)
                 setProjects(data.data);
             } catch (error) {
                 console.error("Error fetching projects", error);
@@ -24,7 +25,6 @@ const Projects = () => {
                     key={project.id} 
                     project={project}
                     />
-
                 )
             })
         }

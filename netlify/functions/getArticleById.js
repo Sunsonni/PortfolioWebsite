@@ -1,8 +1,9 @@
-export async function handler() {
+export async function handler(event) {
+   const { documentId }= event.queryStringParameters;
    try {
       const API_KEY = process.env.VITE_STRAPI_API_KEY;// eslint-disable-line
       const BASE_URL = process.env.VITE_STRAPI_AUTH_DOMAIN; // eslint-disable-line
-      const response = await fetch(`${BASE_URL}/api/projects`, {
+      const response = await fetch(`${BASE_URL}/api/articles/${documentId}`, {
             headers: {
                 'Authorization': `Bearer ${API_KEY}`,
                 'Content-Type': 'application/json'
@@ -12,7 +13,6 @@ export async function handler() {
       console.log("getData", cmsData);
       return {
          statusCode: 200,
-         headers: { "Content-Type": "application/json" },
          body: JSON.stringify(cmsData)
       };
    } catch (error) {
