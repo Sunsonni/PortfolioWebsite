@@ -9,6 +9,7 @@ import Resume from './components/Resume.jsx'
 import Projects from './components/Projects.jsx'
 import { Post } from './components/Post.jsx'
 import Error from './components/404.jsx'
+import FolderStack from './components/folderstack.jsx'
 
 const router = createBrowserRouter([
     {
