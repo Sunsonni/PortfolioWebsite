@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": "20"
+    "node": ">=22.12"
   },
   "scripts": {
     "dev": "vite",
@@ -14,9 +14,16 @@
   },
   "dependencies": {
     "@netlify/functions": "^4.2.2",
+    "@portabletext/vue": "^1.0.14",
+    "@sanity/client": "^7.26.2",
+    "@sanity/image-url": "^2.1.1",
+    "@wwtdev/bsds-components-vue3": "^3.4.0",
+    "@wwtdev/bsds-css": "^3.4.0",
+    "@wwtdev/bsds-icons-vue3": "^2.35.0",
     "bootstrap": "^5.3.7",
     "dotenv": "^17.2.1",
-    "netlify-cli": "^23.7.3",
+    "groq": "^6.9.0",
+    "netlify-cli": "^26.2.0",
     "simplex-noise": "^4.0.3",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"

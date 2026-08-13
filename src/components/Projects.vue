@@ -4,22 +4,26 @@ import Card from './Card.vue'
 import APIService from '../services/service.js'
 
 const projects = ref([])
+const loading = ref(true)
 
 onMounted(async () => {
-  try {
-    const data = await APIService.fetchProjects()
-    projects.value = data?.data ?? []
-  } catch (error) {
-    console.error('Error fetching projects', error)
-  }
+  projects.value = await APIService.fetchProjects()
+  loading.value = false
 })
 </script>
 
 <template>
   <div class="blog">
+    <p v-if="loading">
+      Loading projects…
+    </p>
+    <p v-else-if="!projects.length">
+      No projects yet.
+    </p>
     <Card
       v-for="project in projects"
-      :key="project.id"
+      v-else
+      :key="project._id"
       :project="project"
     />
   </div>

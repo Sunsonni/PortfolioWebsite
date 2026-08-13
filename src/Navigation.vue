@@ -79,6 +79,14 @@ onUnmounted(() => {
         </li>
         <li class="nav-item">
           <router-link
+            to="/Blog"
+            class="nav-link"
+          >
+            Blog
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link
             to="/Resume"
             class="nav-link"
           >

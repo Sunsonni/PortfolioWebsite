@@ -1,39 +1,42 @@
+import { client } from '../sanity/client.js'
+import {
+  POSTS_QUERY,
+  POST_QUERY,
+  PROJECTS_QUERY,
+  PROJECT_QUERY,
+} from '../sanity/queries.js'
+
 const APIService = {
-  fetchArticles: async () => {
+  fetchPosts: async () => {
     try {
-      const response = await fetch('/.netlify/functions/getData')
-      if (!response.ok) {
-        throw new Error('Failed to fetch data')
-      }
-      return response
+      return await client.fetch(POSTS_QUERY)
     } catch (error) {
-      console.error('Failed to fetch data:', error)
+      console.error('Failed to fetch posts:', error)
+      return []
+    }
+  },
+  fetchPostBySlug: async (slug) => {
+    try {
+      return await client.fetch(POST_QUERY, { slug })
+    } catch (error) {
+      console.error('Failed to fetch post:', error)
+      return null
     }
   },
   fetchProjects: async () => {
     try {
-      const response = await fetch('/.netlify/functions/getProjects')
-      if (!response.ok) {
-        throw new Error(`Error. Status : ${response.status}`)
-      }
-      const data = response.json()
-      return data
+      return await client.fetch(PROJECTS_QUERY)
     } catch (error) {
-      console.error('Failed to fetch data:', error)
-      return null
+      console.error('Failed to fetch projects:', error)
+      return []
     }
   },
-  fetchArticleByDocumentId: async (documentId) => {
+  fetchProjectBySlug: async (slug) => {
     try {
-      const response = await fetch(
-        `/.netlify/functions/getArticleByDocumentId?documentId=${documentId}`
-      )
-      if (!response.ok) {
-        throw new Error('Failed to fetch data')
-      }
-      return response
+      return await client.fetch(PROJECT_QUERY, { slug })
     } catch (error) {
-      console.error('Failed to fetch data:', error)
+      console.error('Failed to fetch project:', error)
+      return null
     }
   },
 }
