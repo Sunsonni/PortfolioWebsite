@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import Card from './Card.vue'
 import APIService from '../services/service.js'
+import { BsSpinner } from '@wwtdev/bsds-components-vue3'
 
 const projects = ref([])
 const loading = ref(true)
@@ -13,10 +14,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="blog">
-    <p v-if="loading">
-      Loading projects…
-    </p>
+  <div class="flex items-center justify-center h-screen w-screen">
+      <BsSpinner
+        v-if="loading"
+        label="trying to load"
+      ></BsSpinner>
     <p v-else-if="!projects.length">
       No projects yet.
     </p>
@@ -28,3 +30,7 @@ onMounted(async () => {
     />
   </div>
 </template>
+
+<style>
+
+</style>
