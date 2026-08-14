@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, VueElement } from 'vue'
 import { useRoute } from 'vue-router'
 import Navigation from './Navigation.vue'
 import Footer from './Footer.vue'

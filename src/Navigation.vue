@@ -96,5 +96,4 @@ onUnmounted(() => {
       </ul>
     </div>
   </nav>
-  <div class="rounded-line" />
 </template>

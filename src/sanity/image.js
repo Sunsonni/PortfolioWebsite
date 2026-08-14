@@ -1,7 +1,7 @@
-import imageUrlBuilder from '@sanity/image-url'
+import { createImageUrlBuilder } from '@sanity/image-url'
 import { client } from './client.js'
 
-const builder = imageUrlBuilder(client)
+const builder = createImageUrlBuilder(client)
 
 /**
  * Build a CDN URL for a Sanity image reference.

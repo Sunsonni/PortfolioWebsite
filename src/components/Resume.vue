@@ -12,18 +12,12 @@ const onButtonClick = () => {
 </script>
 
 <template>
-  <div class="resume-container">
+  <div class="flex flex-col items-center justify-center h-screen w-screen">
     <embed
       :src="pdfUrl"
       width="80%"
       height="600px"
       type="application/pdf"
     >
-  </div>
-  <button
-    class="downloadButton"
-    @click="onButtonClick"
-  >
-    Download resume here
-  </button>
+</div>
 </template>

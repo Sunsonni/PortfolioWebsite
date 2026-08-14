@@ -22,7 +22,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="blog">
+  <div class="flex items-center justify-center h-screen w-screen">
     <p v-if="loading">
       Loading posts…
     </p>
@@ -66,5 +66,5 @@ onMounted(async () => {
         </p>
       </div>
     </article>
-  </div>
+  </div> 
 </template>

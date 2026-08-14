@@ -24,14 +24,13 @@ export const POST_QUERY = groq`
 `
 
 export const PROJECTS_QUERY = groq`
-  *[_type == "project"] | order(order asc, title asc) {
+  *[_type == "project" && defined(slug.current)] | order(_createdAt desc) {
     _id,
     title,
     "slug": slug.current,
     description,
     link,
-    mainImage,
-    tags
+    _createdAt
   }
 `
 
@@ -42,7 +41,6 @@ export const PROJECT_QUERY = groq`
     "slug": slug.current,
     description,
     link,
-    mainImage,
-    tags
+    _createdAt
   }
 `

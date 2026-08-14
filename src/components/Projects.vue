@@ -9,6 +9,7 @@ const loading = ref(true)
 
 onMounted(async () => {
   projects.value = await APIService.fetchProjects()
+  console.log(projects.value)
   loading.value = false
 })
 </script>

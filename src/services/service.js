@@ -1,15 +1,17 @@
 import { client } from '../sanity/client.js'
+
 import {
   POSTS_QUERY,
   POST_QUERY,
   PROJECTS_QUERY,
   PROJECT_QUERY,
 } from '../sanity/queries.js'
+const options = { next: { revalidate: 30 } }
 
 const APIService = {
   fetchPosts: async () => {
     try {
-      return await client.fetch(POSTS_QUERY)
+      return request = await client.fetch(POSTS_QUERY, [], options)
     } catch (error) {
       console.error('Failed to fetch posts:', error)
       return []

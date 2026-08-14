@@ -95,14 +95,22 @@ body::after {
   align-items: center;
   margin: 0 auto;
   position: relative;
-  z-index: 100px;
+  z-index: 100;
 }
 
 .navbar-collapse {
   position: relative;
   width: 100vw;
-  background-color: #EFE8D8; 
-  margin-top: -10px;;
+  background-color: #EFE8D8;
+  margin-top: -10px;
+}
+
+/* Tailwind ships a `.collapse` utility (visibility: collapse) that collides with
+   Bootstrap's `.collapse` component. index.css loads after bootstrap.min.css, so
+   Tailwind wins the tie and makes the whole nav menu invisible. This restores
+   visibility; Bootstrap still handles open/closed via `display`. */
+.navbar-collapse.collapse {
+  visibility: visible;
 }
 
 .rounded-line {
